@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>1.3多级导航菜单</title>
+
+</head>
+<body>
+<!--ul#menu>li{link$}*3>a[href=#]-->
+<ul id="menu">
+    <li>link1<a href="#"></a></li>
+    <li>link2<a href="#"></a></li>
+    <li>link3<a href="#"></a></li>
+</ul>
+</body>
+</html>
+
+
+<!--
+子代选择器 #menu 只能选择亲儿子
+
+注意权重值，后定义的把前面的覆盖掉
+
+
+
+菜单里一般套a
+css 下可以控制鼠标样式,变成小手  cursor:pointer;
+
+js:
+<script> .... </script>  写在body结束的上面
+/*
+*js弱类型语言
+* number  string(字符串)  boolean  null  undefined(并没有给变量赋初始值)  float(浮点型)  array(数组[])
+**/
+定义变量都用  var sABC="a,b,c";
+              bar bABC=true;
+看是什么类型  console.log(typeof a);
+输出  console.log(a); 或alert
+
+变量不能是关键字，保留字，不能数字开头
+如果是对象，以o开头 object类型
+js事件驱动  1、事件源  2、事件处理函数: function  3、事件e:  function(e)  4、事件类型 aLi[i].onmouseover=function(){ };
+定义函数:
+function fn(){  //形式参数
+alert(111);  函数调用
+}
+fn();  //实参
+
+定义属性var.obj = new Object();
+       obj.name = " wang";
+定义方法 obj.hello=function(){ }
+
+1、通过Id获取元素 var oBtn=document.getElementById(btn);
+2、通过标签       var aLi = document或oMenu.getElementsByTagName("li")； //nodelist    数组 [0]
+3、通过ClassName  var aLi2=document.getElementByClassName("main-menu");  不支持早期ie6,7,8
+
+
+css里设置字体大小 font-size
+js里 fontSize
+
+遍历  for循环
+标志位 ：标识当前状态合上还是展开，展开就合，合就展开
+取反 用！
+
+this 对当前对象的引用  var oSubMenu = this.getElementByTagName("ul")[0]；
+
+className 属性，过滤
+
+引入内部标签css
+js引入外部标签
+
+-->
