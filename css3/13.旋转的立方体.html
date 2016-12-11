@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000000;
+            -webkit-perspective: 800px;
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+            /*维持3d效果,前面只需在父元素加一次800距离就可以*/
+            animation: run 4s linear infinite;
+            /*1.名字 2.执行时间 3.执行方式 4.延迟*/
+        }
+        @-webkit-keyframes run {
+            0%{
+
+            }
+            100%{
+                -webkit-transform: rotateY(360deg);
+            }
+        }
+        #container div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            /*left: 0;*/
+            /*top: 0;*/
+            background: rgba(255, 255, 255, 0.6);
+            font-size: 50px;      /*设置字的大小*/
+            text-align: center;   /*水平居中*/
+            line-height: 200px;   /*垂直居中*/
+            border-radius: 10px;  /*设置边角为圆形弧度*/
+        }
+        #one{
+            -webkit-transform: rotateX(90deg) translateZ(100px);
+        }
+        #two{
+            -webkit-transform: translateZ(100px);
+            z-index: 1;
+        }
+        #three{
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+        }
+        #four{
+            -webkit-transform: rotateY(180deg) translateZ(100px);
+        }
+        #five{
+            -webkit-transform: rotateY(-90deg) translateZ(100px);
+        }
+        #six{
+            -webkit-transform: rotateX(-90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <div id="five">5</div>
+        <div id="six">6</div>
+    </div>
+</body>
+</html>
